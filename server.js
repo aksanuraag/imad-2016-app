@@ -34,8 +34,59 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+function createTemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    var htmlTemplate = ``;
+}
+
+
+app.get('/' , function(req, res){
+    re.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+function hash(input , salt){
+    var hashedWord = crypto.pbkdf25sync(input, salt, 1000, 512, 'sha512');
+    return hashedWord.toString('hex');
+}
+
+app.get('/hash/:input' , function(req, res){
+    var hashedPd = hash(req.params.input, 'salt-for-some-string');
+    res.send(hashedPd);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
