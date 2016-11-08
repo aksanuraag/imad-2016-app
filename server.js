@@ -26,10 +26,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '', 'Login.html'));
 });
 
-app.get('/ui/style.css', function (req, res) {
+app.get('/css/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'css', 'style.css'));
 });
-
+app.get('/css/bootstrap.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'css', 'bootstrap.css'));
+});
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
