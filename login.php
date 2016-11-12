@@ -46,7 +46,7 @@
         </div>
   </div>
 </nav>
-	<form method="post" action="Login.php">
+	<form method="post" action="login.php">
         <div class="box" style="font-size:20px">
         <h2>Login</h2>
         <input type="text" name="username" placeholder="Username" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'username');" class="email" /><br /><br>
@@ -56,6 +56,12 @@
         <a href="#"><div id="btn2">Sign Up</div></a> 
         </div>
   </form>
+	<?php
+		if(isset()){
+			
+		}
+		
+	?>
 </body>
 </html>
 
