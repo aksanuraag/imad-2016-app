@@ -22,10 +22,9 @@ app.use(session({
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }))
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '', 'login.php'));
+app.get('/' , function(req, res){
+    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
 app.get('/css/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'css', 'style.css'));
 });
@@ -45,9 +44,7 @@ function createTemplate(data){
 }
 
 
-app.get('/' , function(req, res){
-    re.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+
 
 function hash(input , salt){
     var hashedWord = crypto.pbkdf25sync(input, salt, 1000, 512, 'sha512');
