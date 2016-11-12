@@ -23,7 +23,7 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }))
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '', 'Login.html'));
+  res.sendFile(path.join(__dirname, '', 'login.php'));
 });
 
 app.get('/css/style.css', function (req, res) {
